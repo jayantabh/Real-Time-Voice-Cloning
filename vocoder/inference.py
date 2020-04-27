@@ -5,6 +5,7 @@ import torch
 
 _model = None   # type: WaveRNN
 
+
 def load_model(weights_fpath, verbose=True):
     global _model
     
