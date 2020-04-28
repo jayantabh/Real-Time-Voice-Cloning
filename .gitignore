@@ -21,3 +21,4 @@ vocoder/saved_models/*
 waveglow/checkpoints/*
 *.tar.gz
 *.pt
+*checkpoints/*
