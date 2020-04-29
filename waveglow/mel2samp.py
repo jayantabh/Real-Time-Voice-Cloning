@@ -31,7 +31,8 @@ import json
 import torch
 import torch.utils.data
 import sys
-from scipy.io.wavfile import read
+#from scipy.io.wavfile import read
+from soundfile import read   
 
 # We're using the audio processing from TacoTron2 to make sure it matches
 sys.path.insert(0, 'tacotron2')
@@ -46,7 +47,6 @@ def files_to_list(filename):
     """
     with open(filename, encoding='utf-8') as f:
         files = f.readlines()
-
     files = [f.rstrip() for f in files]
     return files
 
@@ -54,7 +54,7 @@ def load_wav_to_torch(full_path):
     """
     Loads wavdata into torch array
     """
-    sampling_rate, data = read(full_path)
+    data , sampling_rate = read(full_path)
     return torch.from_numpy(data).float(), sampling_rate
 
 
@@ -94,9 +94,13 @@ class Mel2Samp(torch.utils.data.Dataset):
 
         # Take segment
         if audio.size(0) >= self.segment_length:
-            max_audio_start = audio.size(0) - self.segment_length
-            audio_start = random.randint(0, max_audio_start)
-            audio = audio[audio_start:audio_start+self.segment_length]
+            audio_std = 0
+            while audio_std < 1e-5:
+                max_audio_start = audio.size(0) - self.segment_length
+                audio_start = random.randint(0, max_audio_start)
+                segment = audio[audio_start:audio_start+self.segment_length]
+                audio_std = segment.std()
+            audio = segment
         else:
             audio = torch.nn.functional.pad(audio, (0, self.segment_length - audio.size(0)), 'constant').data
 
