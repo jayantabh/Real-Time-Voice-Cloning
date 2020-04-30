@@ -22,3 +22,6 @@ waveglow/checkpoints/*
 *.tar.gz
 *.pt
 *checkpoints/*
+Numpy_data/*
+LibriSpeech/*
+Trained_Models/*

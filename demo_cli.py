@@ -168,7 +168,8 @@ if __name__ == '__main__':
         specs = synthesizer.synthesize_spectrograms(texts, embeds)
         spec = specs[0]
         print("Created the mel spectrogram")
-            
+
+        print(spec.shape)
             
         ## Generating the waveform
         print("Synthesizing the waveform:")
@@ -188,6 +189,8 @@ if __name__ == '__main__':
         # pad it.
         if args.vocoder == "wavenet":
             generated_wav = np.pad(generated_wav, (0, synthesizer.sample_rate), mode="constant")
+
+        print(synthesizer.sample_rate)
             
         # Play the audio (non-blocking)
         if not args.no_sound:
