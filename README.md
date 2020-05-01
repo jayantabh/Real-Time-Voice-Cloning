@@ -2,7 +2,7 @@
 ## CS 7643 Deep Learning Project
 
 ### Parent Repositories:
-WaveGlow: https://github.com/NVIDIA/waveglow.git
+WaveGlow: https://github.com/NVIDIA/waveglow.git\\
 Real-Time-Voice-Cloning: https://github.com/CorentinJ/Real-Time-Voice-Cloning.git
 
 ### To Run:
