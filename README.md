@@ -17,27 +17,27 @@ Vocoder:
 
 ### Files Modified from original repository:
 
-./waveglow/inference.py
-./waveglow/mel2samp.py
-./waveglow/train.py
-./waveglow/config.json
-./waveglow/requirements.txt
-./vocoder_train.py
-./demo_cli.py
+./waveglow/inference.py<br/>
+./waveglow/mel2samp.py<br/>
+./waveglow/train.py<br/>
+./waveglow/config.json<br/>
+./waveglow/requirements.txt<br/>
+./vocoder_train.py<br/>
+./demo_cli.py<br/>
 
 ### Files Added to original repository:
-./custom_conv_train_encoder.py
-./custom_create_data_for_encoder.py
-./custom_demo.py
-./custom_LSTM_train_encoder.py
-./custom_model_test.py
-./PCA_Visualize.py
-./PCA_Visualize_google.py
-./sanity_check.py
-./test_end_to_end_diff_text.py
-./test_end_to_end_same_text_custom_embeddings.py
-./test_end_to_end_same_text_og_embeds.py
-./test_google_embedding.py
+./custom_conv_train_encoder.py<br/>
+./custom_create_data_for_encoder.py<br/>
+./custom_demo.py<br/>
+./custom_LSTM_train_encoder.py<br/>
+./custom_model_test.py<br/>
+./PCA_Visualize.py<br/>
+./PCA_Visualize_google.py<br/>
+./sanity_check.py<br/>
+./test_end_to_end_diff_text.py<br/>
+./test_end_to_end_same_text_custom_embeddings.py<br/>
+./test_end_to_end_same_text_og_embeds.py<br/>
+./test_google_embedding.py<br/>
 ./test_mel_spectrogram.py
 
 
