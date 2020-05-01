@@ -10,6 +10,7 @@ Encoder:
 - Data Formatting: custom_create_data_for_encoder.py
 - CNN: custom_conv_train_encoder.py
 - LSTM: custom_LSTM_train_encoder.py
+- Full Pipeline with Custom Encoder: test_end_to_end_same_text_custom_embeddings.py
 
 Vocoder:
 - Train: train_vocoder.ipynb 
