@@ -12,7 +12,8 @@ Encoder:
 - LSTM: custom_LSTM_train_encoder.py
 
 Vocoder:
-Train: train_vocoder.ipynb Inference: inference_vocoder.ipynb (Google Colab)
+- Train: train_vocoder.ipynb 
+- Inference: inference_vocoder.ipynb (Google Colab)
 
 ### Files Modified from original repository:
 
